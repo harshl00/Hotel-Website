@@ -4,96 +4,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Available Hotels to Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f7; /* Light blue-gray background */
+            text-align: center;
+        }
+
+        header {
+            background-color: #0f2341; /* Deep blue background */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-height: 60px;
+            vertical-align: middle;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #0f2341; /* Deep blue background */
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        .hotel-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .hotel {
+            border-radius: 20%;
+            border-color: black;
+            padding: 20px;
+            width: 30%;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+
+        .hotel img {
+            align-items: center;
+            max-width: 20px;
+            height: 2000px;
+            margin-bottom: 10px;
+        }
+
+        .slideshow img {
+            display: none;
+            max-width: 300px;
+            height: 250px;
+        }
+
+        
+.book-btn{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .book-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+  }
+  
+
+        .book-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        
+          .book-btn{
+            top: 0;
+            border-radius: 0% 0% 10% 10%;
+          }
+          .book-btn:hover::before,.btn2:hover::before{
+            height: 180%;
+          }
+        footer {
+            background-color: #0f2341; /* Deep blue background */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+
+
+
+
+
+    
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center;">
+<!-- ... (the rest of your HTML code) -->
+</html>
+</head>
+<body>
 
-    <div style="max-width: 800px; margin: 0 auto; padding: 20px; border: 2px solid #ccc;">
+    <header>
+        <img src="image/logo.png" alt="Logo">
+        <h1 style="display: inline-block; vertical-align: middle; margin-left: 20px;">Available Hotels to Book</h1>
+    </header>
 
-        <h1 style="font-size: 36px; margin-bottom: 20px;">Available Hotels to Book</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Rooms</a>
+        <a href="#">Restaurant</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
 
-        <div style="border: 2px solid #ccc; padding: 20px; margin: 20px 0; max-width: 600px; margin: 0 auto;">
-
-          <a href="b1.html">  <h2>Hotel Le grand udaipur</h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/aa.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/aa1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/aa2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
+    <div class="hotel-list">
+        <div class="hotel">
+            <h2>Hotel Le grand udaipur</h2>
+            <div class="slideshow">
+                <img src="image/aa.jpg" alt="Hotel 1 Image 1">
+                <img src="image/aa1.jpg" alt="Hotel 1 Image 2">
+                <img src="image/aa2.jpg" alt="Hotel 1 Image 3">
             </div>
-
-           <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-           </a><A HREF="b2.html"><h2>The Jagat Hotel and spa</h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/BB.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/BB1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/BB2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
-            </div>
-            
-            <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-        </A>
-        <a href="b3.html">
-            <h2>Hotel Kumbhal Palace</h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/cc.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/cc1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/cc2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
-            </div>
-
-            <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-        </a>
-        <a href="b4.html">
-            <h2>Hotel Hanja Palace</h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/dd.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/dd1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/dd2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
-            </div>
-
-            <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-        </a><a href="b5.html"><h2>Hotel VR</h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/ee.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/ee1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/ee2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
-            </div>
-
-            <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-            </a><a href="b6.html"><h2>Hotel Ambika Chirva house </h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/FF.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/FF1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/FF2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
-            </div>
-
-            <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-           </a><a href="b7.html"> <h2> The Grand Udhav</h2>
-
-            <div id="slideshow" style="max-width: 100%; overflow: hidden; position: relative;">
-                <img src="image/HH.jpg" alt="Hotel 1 Image 1" style="max-width: 100%; height: auto;">
-                <img src="image/HH1.jpg" alt="Hotel 1 Image 2" style="max-width: 100%; height: auto; display: none;">
-                <img src="image/HH2.jpg" alt="Hotel 1 Image 3" style="max-width: 100%; height: auto; display: none;">
-            </div>
-
-            <button class="book-btn" style="background-color: #007BFF; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background-color 0.3s;">Book Now</button>
-</a>
-            <script>
-                const images = document.querySelectorAll('#slideshow img');
-                let currentImage = 0;
-
-                setInterval(() => {
-                    images[currentImage].style.display = 'none';
-                    currentImage = (currentImage+1) % images.length;
-                    images[currentImage].style.display = 'block';
-                }, 3000);
-            </script>
+            <a href="b1.html"><button class="book-btn">Book Now</button></a>
         </div>
 
+        <div class="hotel">
+            <h2>The Jagat Hotel and spa</h2>
+            <div class="slideshow">
+                <img src="image/BB.jpg" alt="Hotel 2 Image 1">
+                <img src="image/BB1.jpg" alt="Hotel 2 Image 2">
+                <img src="image/BB2.jpg" alt="Hotel 2 Image 3">
+            </div>
+            <a href="b2.html"><button class="book-btn">Book Now</button></a>
+        </div>
+
+        <div class="hotel">
+            <h2>Hotel Kumbhal Palace</h2>
+            <div class="slideshow">
+                <img src="image/cc.jpg" alt="Hotel 3 Image 1">
+                <img src="image/cc1.jpg" alt="Hotel 3 Image 2">
+                <img src="image/cc2.jpg" alt="Hotel 3 Image 3">
+            </div>
+            <a href="b3.html"><button class="book-btn">Book Now</button></a>
+        </div>
+        <div class="hotel">
+            <h2>Hotel Hanja Palace</h2>
+            <div class="slideshow">
+                <img src="image/dd.jpg" alt="Hotel 4 Image 1">
+                <img src="image/dd1.jpg" alt="Hotel 4 Image 2">
+                <img src="image/dd2.jpg" alt="Hotel 4 Image 3">
+            </div>
+            <a href="b4.html"><button class="book-btn">Book Now</button></a>
+        </div>
+
+        <div class="hotel">
+            <h2>Hotel VR</h2>
+            <div class="slideshow">
+                <img src="image/ee.jpg" alt="Hotel 5 Image 1">
+                <img src="image/ee1.jpg" alt="Hotel 5 Image 2">
+                <img src="image/ee2.jpg" alt="Hotel 5 Image 3">
+            </div>
+            <a href="b5.html"><button class="book-btn">Book Now</button></a>
+        </div>
+
+        <div class="hotel">
+            <h2>Hotel Ambika Chirva house</h2>
+            <div class="slideshow">
+                <img src="image/FF.jpg" alt="Hotel 6 Image 1">
+                <img src="image/FF1.jpg" alt="Hotel 6 Image 2">
+                <img src="image/FF2.jpg" alt="Hotel 6 Image 3">
+            </div>
+            <a href="b6.html"><button class="book-btn">Book Now</button></a>
+        </div>
+
+        <div class="hotel">
+            <h2>The Grand Udhav</h2>
+            <div class="slideshow">
+                <img src="image/HH.jpg" alt="Hotel 7 Image 1">
+                <img src="image/HH1.jpg" alt="Hotel 7 Image 2">
+                <img src="image/HH2.jpg" alt="Hotel 7 Image 3">
+            </div>
+            <a href="b7.html"><button class="book-btn">Book Now</button></a>
+        </div>
     </div>
+
+    <footer>
+        <p>Contact us at: example@email.com</p>
+        <p>Phone: 123-456-7890</p>
+    </footer>
+
+    <script>
+        const slideshows = document.querySelectorAll('.slideshow');
+
+        slideshows.forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            let currentImage = 0;
+
+            setInterval(() => {
+                images[currentImage].style.display = 'none';
+                currentImage = (currentImage + 1) % images.length;
+                images[currentImage].style.display = 'block';
+            }, 3000);
+        });
+    </script>
 
 </body>
 </html>
+
