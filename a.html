@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .select-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .select-group select {
+            width: 48%;
+        }
+
+        .note {
+            color: #ff0000;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="color: #007bff;">Hotel Booking</h2>
+        <div class="note">Note: In 1 room, only 2 people are allowed. Any extra person will have further charges.</div>
+        <form action="https://formspree.io/f/mpzgnzww" method="POST">
+            <div class="form-group">
+                <label for="booking-name">Booking Name</label>
+                <input type="text" id="booking-name" name="booking-name" required>
+            </div>
+            <div class="form-group">
+                <label for="check-in">Check-In Date</label>
+                <input type="date" id="check-in" name="check-in" required>
+            </div>
+            <div class="form-group">
+                <label for="check-out">Check-Out Date</label>
+                <input type="date" id="check-out" name="check-out" required>
+            </div>
+            <div class="form-group">
+                <label>Room Type</label>
+                <input type="radio" name="room-type" value="single" id="single-room" required>
+                <label for="single-room">Single</label>
+                <input type="radio" name="room-type" value="double" id="double-room" required>
+                <label for="double-room">Double</label>
+                <input type="radio" name="room-type" value="suite" id="suite-room" required>
+                <label for="suite-room">Suite</label>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="num-adults">No. of Adults</label>
+                <select id="num-adults" name="num-adults" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="num-children">No. of Children (0-12)</label>
+                <select id="num-children" name="num-children" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
